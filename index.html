@@ -13,21 +13,19 @@
      <h1>EPG Icon Directory</h1>
      <div class="icon-grid" id="iconGrid"></div>
 
-     <script>
-       fetch('icons2.json')
-         .then(response => response.json())
-         .then(icons => {
-           const grid = document.getElementById('iconGrid');
-           icons.forEach(file => {
-             const item = document.createElement('div');
-             item.className = 'icon-item';
-             item.innerHTML = `
-               <img src="icons2/${file}" alt="${file}">
-               <p>${file}</p>
-             `;
-             grid.appendChild(item);
-           });
-         });
-     </script>
+<script src="icons2.js"></script>
+<script>
+  const grid = document.getElementById('iconGrid');
+  icons.forEach(file => {
+    const item = document.createElement('div');
+    item.className = 'icon-item';
+    item.innerHTML = `
+      <img src="icons2/${file}" alt="${file}">
+      <p>${file}</p>
+    `;
+    grid.appendChild(item);
+  });
+</script>
+
    </body>
    </html>
