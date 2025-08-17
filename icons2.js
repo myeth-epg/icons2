@@ -1,4 +1,7 @@
 [
+"sg.ch5.png",
+"sg.ch8.png",
+"sg.chu.png",
 "t3100.png",
 "t3101.png",
 "t3102.png",
