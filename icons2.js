@@ -72,6 +72,4 @@
 "t3514.png",
 "t3519.png",
 
-
-     // Add more filenames here
    ]
