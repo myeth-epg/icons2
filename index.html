@@ -1,0 +1,33 @@
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <title>EPG Icon Directory</title>
+     <style>
+       body { font-family: Arial, sans-serif; }
+       .icon-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+       .icon-item { text-align: center; width: 120px; }
+       img { max-width: 100px; height: auto; }
+     </style>
+   </head>
+   <body>
+     <h1>EPG Icon Directory</h1>
+     <div class="icon-grid" id="iconGrid"></div>
+
+     <script>
+       fetch('icons.json')
+         .then(response => response.json())
+         .then(icons => {
+           const grid = document.getElementById('iconGrid');
+           icons.forEach(file => {
+             const item = document.createElement('div');
+             item.className = 'icon-item';
+             item.innerHTML = `
+               <img src="icons2/${file}" alt="${file}">
+               <p>${file}</p>
+             `;
+             grid.appendChild(item);
+           });
+         });
+     </script>
+   </body>
+   </html>
